@@ -2,17 +2,23 @@ package rpg;
 
 import java.util.Random;
 
+// to jest project podobny do rpg gdzie są różne rasy biją się pomiędzy sobą
+
 public abstract class Hero {
     protected String name;
     protected int health;
     protected int strength;
     protected static Random rand = new Random();
+    
+    // konstruktor
 
     public Hero(String name, int health, int strength) {
         this.name = name;
         this.health = health;
         this.strength = strength;
     }
+    
+    // getery i setery dla argumentów
 
     public String getName() {
         return name;
@@ -37,6 +43,8 @@ public abstract class Hero {
     public void setStrength(int strength) {
         this.strength = strength;
     }
+    
+    // funkcja ataku 
 
     public abstract void attack(Hero another);
 
